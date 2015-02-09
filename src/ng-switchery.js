@@ -36,6 +36,10 @@ angular.module('NgSwitchery', [])
               initializeSwitch();
             });
 
+            scope.$watch('initValue', function(value) {
+              initializeSwitch();
+            });
+
             function initializeSwitch() {
               $timeout(function() {
                 // Remove any old switcher
